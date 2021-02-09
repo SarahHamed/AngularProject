@@ -1,0 +1,15 @@
+<p>tv-detail works!</p>
+
+<div class="container py-5 text-center">
+    <div *ngIf="trendingTV" class="col-md-8 my-5 m-auto">
+        <div class="movie position-relative">
+            <div class="col-md-3 m-auto">
+                <img class="img-fluid" src="https://image.tmdb.org/t/p/w500/{{trendingTV.poster_path}}" />
+                <div class="vote">{{trendingTV.vote_average}}</div>
+            </div>
+        </div>
+        <h6 class="text-info my-2 text-center title">{{trendingTV.title == undefined? trendingTV.name:trendingTV.title}}</h6>
+        <div class="text-white my-4 text-center ">{{trendingTV.overview}} </div>
+
+    </div>
+</div>

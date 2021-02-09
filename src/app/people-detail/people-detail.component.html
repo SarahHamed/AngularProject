@@ -1,0 +1,12 @@
+<div class="container py-5 text-center">
+    <div *ngIf="trendingPerson" class="col-md-8 my-5 m-auto">
+        <div class="movie position-relative">
+            <div class="col-md-3 m-auto">
+                <img class="img-fluid rounded" src="https://image.tmdb.org/t/p/w500/{{trendingPerson.profile_path}}" />
+            </div>
+        </div>
+        <h6 class="text-primary my-2 text-center title">{{trendingPerson.name}}</h6>
+        <div class="text-white my-4 text-center ">{{trendingPerson.biography}} </div>
+
+    </div>
+</div>

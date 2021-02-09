@@ -1,0 +1,79 @@
+/* You can add global styles to this file, and also import other style files */
+
+$fontFamily: 'Montserrat',
+sans-serif;
+$borderHeight:1px;
+$mainWidth:400px;
+$fontSize:16px;
+$bgColor:#131722;
+$lightBgColor:#24baef;
+$bgTransparent:rgba(36, 186, 239, 0.6);
+$fontColor:#fff;
+$borderColor:#a8a8a83d;
+$borderHeight:1px;
+$secondFontColor:#949cb0;
+body {
+    background-color: $bgColor;
+    font-family: $fontFamily;
+    font-size: $fontSize;
+}
+
+a {
+    color: $fontColor;
+    text-decoration: none;
+}
+
+.vote {
+    background-color: $lightBgColor;
+    color: $fontColor;
+    padding: 8px;
+    font-weight: 700px;
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+.brdr {
+    height: $borderHeight;
+    background-color: $borderColor;
+}
+
+@media screen and (max-width: 780px) {
+    .page {
+        width: 50% !important;
+    }
+    .title {
+        font-size: 1.3rem;
+        font-weight: bold;
+        background-color: rgba($color: #fff, $alpha: 0.2);
+        margin-bottom: 50px;
+        border-radius: round($number: 5px);
+        width: 50%;
+        margin: auto;
+    }
+    .movie {
+        margin-bottom: 5px !important;
+        display: flex;
+        justify-content: center;
+    }
+    .vote {
+        right: 120px;
+        top: 0;
+    }
+    img {
+        width: 50%;
+        justify-content: center;
+    }
+}
+
+i {
+    cursor: pointer;
+}
+
+.pageNum {
+    cursor: pointer;
+}
+
+.movie a {
+    text-align: center;
+}

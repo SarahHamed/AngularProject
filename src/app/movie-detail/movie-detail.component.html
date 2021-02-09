@@ -1,0 +1,13 @@
+<div class="container py-5 text-center">
+    <div *ngIf="trendingMovie" class="col-md-8 my-5 m-auto">
+        <div class="movie position-relative">
+            <div class="col-md-3 m-auto">
+                <img class="img-fluid" src="https://image.tmdb.org/t/p/w500/{{trendingMovie.poster_path}}" />
+                <div class="vote">{{trendingMovie.vote_average}}</div>
+            </div>
+        </div>
+        <h6 class="text-info my-2 text-center title">{{trendingMovie.title == undefined? trendingMovie.name:trendingMovie.title}}</h6>
+        <div class="text-white my-4 text-center ">{{trendingMovie.overview}} </div>
+
+    </div>
+</div>

@@ -1,0 +1,46 @@
+<div class="container w-75 my-5">
+    <Form [formGroup]='contactsForm' (ngSubmit)='saveForm()'>
+        <div class="form-group">
+            <label class="text-white">ClientName:</label>
+            <input formControlName='clientName' class="form-control">
+            <small class="text-warning">ClientName between 2 and 8</small>
+            <div *ngIf="contactsForm.controls.clientName.errors != null && contactsForm.controls.clientName.touched" class="border border-danger p-2 m-2">
+                <p class="text-danger">ClientName not valid</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="text-white">Age:</label>
+            <input formControlName='clientAge' class="form-control">
+            <small class="text-warning">clientAge between 10 and 80</small>
+            <div *ngIf="contactsForm.controls.clientAge.errors != null && contactsForm.controls.clientAge.touched" class="border border-danger p-2 m-2">
+                <p class="text-danger">clientAge not valid</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="text-white">Mail:</label>
+            <input formControlName='clientMail' class="form-control">
+            <small class="text-warning">clientMail must be valid name</small>
+            <div *ngIf="contactsForm.controls.clientMail.errors != null && contactsForm.controls.clientMail.touched" class="border border-danger p-2 m-2">
+                <p class="text-danger">clientMail not valid</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="text-white">Message Title:</label>
+            <input formControlName='messageTitle' class="form-control">
+            <!--   <small class="text-warning">messageTitle</small> -->
+            <div *ngIf="contactsForm.controls.messageTitle.errors != null && contactsForm.controls.messageTitle.touched" class="border border-danger p-2 m-2">
+                <p class="text-danger">messageTitle not valid</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="text-white">Message Body:</label>
+            <textarea formControlName='messageBody' class="form-control"></textarea>
+        </div>
+        <button [disabled]='!contactsForm.valid' type="submit" class="btn btn-info">send</button>
+
+    </Form>
+</div>

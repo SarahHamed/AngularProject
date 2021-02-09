@@ -1,0 +1,16 @@
+<!--<p class="text-white">all-detail works! {{id}}</p>-->
+
+
+<div class="container py-5 text-center">
+    <div *ngIf="trendingAll" class="col-md-8 my-5 m-auto">
+        <div class="movie position-relative">
+            <div class="col-md-3 m-auto">
+                <img class="img-fluid" src="https://image.tmdb.org/t/p/w500/{{trendingAll.poster_path}}" />
+                <div class="vote">{{trendingAll.vote_average}}</div>
+            </div>
+        </div>
+        <h6 class="text-info my-2 text-center title">{{trendingAll.title == undefined? trendingAll.name:trendingAll.title}}</h6>
+        <div class="text-white my-4 text-center ">{{trendingAll.overview}} </div>
+
+    </div>
+</div>

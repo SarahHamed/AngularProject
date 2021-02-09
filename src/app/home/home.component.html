@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-md-4 py-5">
+        <div class="brdr w-25"></div>
+        <h2 class="text-white py-3">All Popular Shows <br/> Right now</h2>
+        <p class="text-muted">Most trending shows this month</p>
+        <div class="brdr w-100"></div>
+    </div>
+    <div *ngFor="let movie of trendingAll" class="col-sm-8 col-md-2 my-3">
+        <div class="movie position-relative">
+            <a [routerLink]="['/home/allDetail',movie.media_type,movie.id]">
+                <img class="img-fluid" src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" />
+            </a>
+            <!-- <img class="img-fluid"  [src]="movie.poster_path"/> -->
+            <div class="vote">{{movie.vote_average}}</div>
+        </div>
+        <a [routerLink]="['/home/allDetail',movie.media_type,movie.id]">
+            <h6 class="text-white my-2 text-center title">{{movie.title == undefined? movie.name:movie.title}}</h6>
+        </a>
+    </div>
+</div>
+
+<div class="w-25 mx-auto my-5 py-5 d-flex page ">
+    <i (click)='prev()' class="fas fa-arrow-alt-circle-left text-white fa-2x m-2"></i>
+    <div class="p-3 text-white" *ngFor="let pageNumber of pageNumbers" (click)='changePage(pageNumber)'>{{pageNumber}}</div>
+    <i (click)='next()' class="fas fa-arrow-alt-circle-right text-white fa-2x m-2"></i>
+</div>
